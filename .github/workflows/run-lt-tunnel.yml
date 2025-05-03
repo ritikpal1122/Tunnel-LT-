@@ -16,6 +16,10 @@ on:
         description: 'Environment (stage or prod)'
         required: true
         default: 'prod'
+        type: choice
+        options:
+          - prod
+          - stage
 
 jobs:
   run-tunnel:
