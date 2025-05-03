@@ -28,6 +28,14 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+      - name: Log Trigger Info
+        run: |
+          echo "Workflow triggered by: ${{ github.actor }}"
+          echo "LambdaTest Username: ${{ github.event.inputs.username }}"
+          echo "Environment: ${{ github.event.inputs.env }}"
+          echo "Tunnel Name: ${{ github.event.inputs.tunnel_name }}"
+
+    
 
       - name: Run LT Tunnel
         run: |
