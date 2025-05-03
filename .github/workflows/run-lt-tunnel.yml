@@ -29,6 +29,7 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+
       - name: Log Trigger Info
         run: |
           echo "Workflow triggered by: ${{ github.actor }}"
@@ -36,9 +37,11 @@ jobs:
           echo "Environment: ${{ github.event.inputs.env }}"
           echo "Tunnel Name: ${{ github.event.inputs.tunnel_name }}"
 
+      - name: Check Binary Type
+        run: file ./LT
+
       - name: Make LT Binary Executable
         run: chmod +x ./LT
-    
 
       - name: Run LT Tunnel
         run: |
