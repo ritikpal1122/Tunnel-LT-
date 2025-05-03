@@ -37,7 +37,7 @@ jobs:
           echo "Tunnel Name: ${{ github.event.inputs.tunnel_name }}"
 
       - name: Make LT Binary Executable
-        run: chmod +x bin/LT
+        run: chmod +x ./LT
     
 
       - name: Run LT Tunnel
