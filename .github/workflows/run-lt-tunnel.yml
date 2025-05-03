@@ -34,7 +34,12 @@ jobs:
           echo "LambdaTest Username: ${{ github.event.inputs.username }}"
           echo "Environment: ${{ github.event.inputs.env }}"
           echo "Tunnel Name: ${{ github.event.inputs.tunnel_name }}"
-
+          
+      - name: Download LT Binary
+        run: |
+            curl -O https://downloads.lambdatest.com/lt-linux.zip
+            unzip lt-linux.zip
+            chmod +x LT
     
 
       - name: Run LT Tunnel
