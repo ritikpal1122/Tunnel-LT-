@@ -5,6 +5,7 @@ on:
     inputs:
       username:
         description: 'LambdaTest Username'
+        default: 'auteur-bot@ltqa.lambdatestautomation.com'
         required: true
       access_key:
         description: 'LambdaTest Access Key'
