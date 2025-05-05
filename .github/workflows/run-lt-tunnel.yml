@@ -45,6 +45,7 @@ jobs:
 
       - name: Run LT Tunnel
         run: |
+          chmod +x ./LT
           ./LT --user ${{ github.event.inputs.username }} \
                --key ${{ github.event.inputs.access_key }} \
                --env ${{ github.event.inputs.env }} -v --mitm \
